@@ -1,0 +1,57 @@
+body {
+    background-image: url("cakes3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+   /* animation-name: fadeBackround;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;*/
+  }
+
+ /* @keyframes fadeBackground {
+    0% {
+      opacity: 0;
+    }
+    
+    100% {
+      opacity: 1;
+    }
+  }*/
+
+  header {
+    background-color: orange;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display the menu items horizontally */
+    justify-content: flex-end; /*Aligns items to the right*/
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: auto; /* pushes the create profile tab to the right*/
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    background-color: transparent;
+    padding: 20px;
+    scroll-margin-block: 20px;
+  }
+  
+  #login {
+    display: none;
+  }
+  

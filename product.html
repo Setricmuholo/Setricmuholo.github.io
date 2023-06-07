@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cakes Sweetness Café - More Products</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#" onclick="toggleLogin()">Create Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="more-products">
+    <h2>More Products</h2>
+    <p>We offer</p>
+   <p>
+    Chocolate Fudge Cake: Indulge your taste buds with the rich and decadent delight of a chocolate fudge cake. This classic dessert is a chocoholic's dream come true. Layers of moist and velvety chocolate cake are generously slathered with a thick, smooth, and luscious chocolate fudge frosting. Each bite is a heavenly experience as the cake melts in your mouth, releasing a burst of intense chocolate flavor. Whether it's a birthday celebration or a simple craving for something sweet, the chocolate fudge cake is a go-to choice for all occasions.
+   </p>
+   <p>
+    Red Velvet Cake: Delicate, elegant, and visually stunning, the red velvet cake is a true showstopper. With its striking crimson hue and subtle hints of cocoa, this cake is as beautiful as it is delicious. The tender layers of red velvet cake are known for their moist texture and subtle buttermilk tang. The crowning glory of the red velvet cake is the creamy cream cheese frosting that perfectly complements the cake's flavors. The contrasting colors of the cake and frosting create a visually pleasing dessert that adds a touch of luxury to any gathering. The red velvet cake is a timeless classic that never fails to impress.
+   </p>
+  </section>
+
+  <section id="login">
+    <h2>Create Profile</h2>
+    <button onclick="showLogin()">Create Account</button>
+    <button onclick="showLogin()">Log In</button>
+  </section>
+
+  <script>
+    function toggleLogin() {
+      var loginSection = document.getElementById("login");
+      loginSection.style.display = loginSection.style.display === "none" ? "block" : "none";
+    }
+
+    function showLogin() {
+      alert("This feature is not implemented yet.");
+    }
+   /* function createAccount(event) {
+      event.preventDefault();
+
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Perform account creation logic here
+      // You can use JavaScript to handle form validation, make API requests, etc.
+      // For simplicity, we'll just display an alert message with the entered data
+      alert("Account created successfully!\n\nUsername: " + username + "\nEmail: " + email + "\nPassword: " + password);
+    }*/
+
+  </script>
+</body>
+</html>
