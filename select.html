@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cakes Sweetness Café - Select Ingredients</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="select.html">Select Ingredients</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="ingredients">
+    <h2>Select Ingredients</h2>
+    <ul>
+        <li>All-purpose flour</li>
+        <li>Granulated sugar</li>
+        <li>Unsalted butter</li>
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Vanilla extract</li>
+        <li>Baking powder</li>
+        <li>Salt</li>
+        <li>White vinegar</li>
+        <li>Red food coloring</li>
+        <li>Buttermilk</li>
+        <li>Cocoa powder</li>
+        <li>Unsweetened cocoa powder</li>
+        <li>Ground cinnamon</li>
+        <li>Grated carrots</li>
+        <li>Vegetable oil</li>
+        <li>Lemon zest</li>
+        <li>Lemon juice</li>
+        <li>Fresh strawberries</li>
+      <!-- Add more ingredient options here -->
+    </ul>
+    <button onclick="selectCake()">Select Cake</button>
+  </section>
+
+  <script>
+    function selectCake() {
+      var selectedIngredients = getSelectedIngredients();
+      
+      // Check the selected ingredients to determine the cake type
+      if (
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Unsalted butter") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Milk") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt")
+      ) {
+        // Redirect to Vanilla Cake page
+        window.location.href = "vanilla-cake.html";
+      } else if (
+        // Check other ingredient combinations and redirect accordingly
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Unsalted butter") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Milk") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt") &&
+        selectedIngredients.includes("Unsweetened cocoa powder")
+      ) {
+        // Redirect to Chocolate Cake page
+        window.location.href = "chocolate-cake.html";
+      } else if (
+        // Check other ingredient combinations and redirect accordingly
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Unsalted butter") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Buttermilk") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt") &&
+        selectedIngredients.includes("Cocoa powder") &&
+        selectedIngredients.includes("Red food coloring") &&
+        selectedIngredients.includes("White vinegar")
+      ) {
+        // Redirect to Red Velvet Cake page
+        window.location.href = "red_velvet-cake.html";
+      } else if (
+        // Check other ingredient combinations and redirect accordingly
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Vegetable oil") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt") &&
+        selectedIngredients.includes("Ground cinnamon") &&
+        selectedIngredients.includes("Grated carrots")
+      ) {
+        // Redirect to Carrot Cake page
+        window.location.href = "carrot-cake.html";
+      } else if (
+        // Check other ingredient combinations and redirect accordingly
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Unsalted butter") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Buttermilk") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt") &&
+        selectedIngredients.includes("Lemon zest") &&
+        selectedIngredients.includes("Lemon juice")
+      ) {
+        // Redirect to Lemon Cake page
+        window.location.href = "lemon-cake.html";
+      } else if (
+        // Check other ingredient combinations and redirect accordingly
+        selectedIngredients.includes("All-purpose flour") &&
+        selectedIngredients.includes("Granulated sugar") &&
+        selectedIngredients.includes("Unsalted butter") &&
+        selectedIngredients.includes("Eggs") &&
+        selectedIngredients.includes("Milk") &&
+        selectedIngredients.includes("Vanilla extract") &&
+        selectedIngredients.includes("Baking powder") &&
+        selectedIngredients.includes("Salt") &&
+        selectedIngredients.includes("Fresh strawberries")
+      ) {
+        // Redirect to Strawberry Cake page
+        window.location.href = "strawberry-cake.html";
+      } else {
+        // Redirect to All Cakes page (displaying all cake options)
+        window.location.href = "all-cakes.html";
+      }
+    }
+
+    function getSelectedIngredients() {
+      var ingredientList = document.querySelectorAll("#ingredients li");
+      var selectedIngredients = [];
+      for (var i = 0; i < ingredientList.length; i++) {
+        if (ingredientList[i].classList.contains("selected")) {
+          selectedIngredients.push(ingredientList[i].innerText);
+        }
+      }
+      return selectedIngredients;
+    }
+
+    var ingredientItems = document.querySelectorAll("#ingredients li");
+    for (var i = 0; i < ingredientItems.length; i++) {
+      ingredientItems[i].addEventListener("click", function() {
+        this.classList.toggle("selected");
+      });
+    }
+  </script>
+</body>
+</html>
