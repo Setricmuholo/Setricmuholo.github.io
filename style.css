@@ -1,8 +1,11 @@
 body {
-    background-image: url("cakes3.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: black;
+    background-image: url("background/Home.png");
+   /* background-color: azure;*/
+    background-repeat: repeat;
+    background-position: cover;
+    background-size: normal;
+   /* background-color: rgba(0, 0, 0, 0.5); /* 50% transparency */
+    color: white;
    /* animation-name: fadeBackround;
     animation-duration: 2s;
     animation-timing-function: ease-in;
@@ -54,4 +57,38 @@ body {
   #login {
     display: none;
   }
+
+  #carousel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #carousel {
+    display: flex;
+    animation: carouselAnimation 3s linear infinite;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  @keyframes carouselAnimation {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-200%); }
+  }
+
+  img {
+    width: 300px;
+    height: 200px;
+  }
+  
+  
   
